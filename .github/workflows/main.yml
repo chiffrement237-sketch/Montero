@@ -1,0 +1,19 @@
+name: Uchiha MD Workflow
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout de Madara
+        uses: actions/checkout@v4
+
+      - name: Démarrage de Uchiha MD
+        run: |
+          echo "Initialisation du projet par Madara..."
+          echo "Uchiha MD est prêt à être déployé."
